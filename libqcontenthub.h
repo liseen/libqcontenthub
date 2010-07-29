@@ -9,7 +9,8 @@
 namespace qcontent {
 
 class HubClient {
-    HubClient(const std::string &host, uint16_t port, uint32_t timeout = 10000000):m_client(m_host, m_port), m_host(host), m_port(port), m_timeout(timeout) {
+public:
+    HubClient(const std::string &host, uint16_t port, uint32_t timeout = 10000000):m_client(host, port), m_host(host), m_port(port), m_timeout(timeout) {
         m_client.set_timeout(timeout);
     }
 
@@ -19,7 +20,9 @@ class HubClient {
     int stop_queue(const std::string &name);
     int force_del_queue(const std::string &name);
     int push_queue(const std::string &name, const std::string &content);
+    int push_queue_nowait(const std::string &name, const std::string &content);
     int pop_queue(const std::string &name, std::string &content);
+    int pop_queue_nowait(const std::string &name, std::string &content);
     int stats(std::string &stats_content);
     int stat_queue(const std::string &name, std::string &stats_content);
 
