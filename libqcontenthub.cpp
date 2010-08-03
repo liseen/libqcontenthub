@@ -133,7 +133,7 @@ int HubClient::stat_queue(const std::string &name, std::string &stats_content)
 {
     m_error_str.clear();
     try {
-        stats_content = m_client.call("stat", name).get<std::string>();
+        stats_content = m_client.call("stat_queue", name).get<std::string>();
         return QCONTENTHUB_OK;
     } catch (std::exception& e) {
         m_error_str = std::string(e.what());
