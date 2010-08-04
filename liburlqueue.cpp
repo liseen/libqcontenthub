@@ -3,7 +3,7 @@
 
 namespace qcontent {
 
-int UrlQueueClient::push_url(const std::string &site, const std::string &content)
+int UrlQueue::push_url(const std::string &site, const std::string &content)
 {
     m_error_str.clear();
     try {
@@ -14,7 +14,7 @@ int UrlQueueClient::push_url(const std::string &site, const std::string &content
     }
 }
 
-int UrlQueueClient::pop_url(std::string &record)
+int UrlQueue::pop_url(std::string &record)
 {
     m_error_str.clear();
     try {
@@ -32,7 +32,7 @@ int UrlQueueClient::pop_url(std::string &record)
     }
 }
 
-int UrlQueueClient::set_default_interval(int interval)
+int UrlQueue::set_default_interval(int interval)
 {
     m_error_str.clear();
     try {
@@ -43,7 +43,7 @@ int UrlQueueClient::set_default_interval(int interval)
     }
 }
 
-int UrlQueueClient::set_site_interval(const std::string &site, int interval)
+int UrlQueue::set_site_interval(const std::string &site, int interval)
 {
     m_error_str.clear();
     try {
@@ -54,7 +54,7 @@ int UrlQueueClient::set_site_interval(const std::string &site, int interval)
     }
 }
 
-int UrlQueueClient::stats(std::string &stats_content)
+int UrlQueue::stats(std::string &stats_content)
 {
     m_error_str.clear();
     try {
@@ -66,7 +66,7 @@ int UrlQueueClient::stats(std::string &stats_content)
     }
 }
 
-int UrlQueueClient::stat_site(const std::string &site, std::string &stats_content)
+int UrlQueue::stat_site(const std::string &site, std::string &stats_content)
 {
     m_error_str.clear();
     try {
@@ -79,7 +79,7 @@ int UrlQueueClient::stat_site(const std::string &site, std::string &stats_conten
 }
 
 
-const std::string& UrlQueueClient::error_str()
+const std::string& UrlQueue::error_str()
 {
     return m_error_str;
 }

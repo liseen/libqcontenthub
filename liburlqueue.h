@@ -8,9 +8,9 @@
 
 namespace qcontent {
 
-class UrlQueueClient {
+class UrlQueue {
 public:
-    UrlQueueClient(const std::string &host, uint16_t port, uint32_t timeout = 3 ) : \
+    UrlQueue(const std::string &host, uint16_t port, uint32_t timeout = 3 ) : \
         m_client(host, port), m_host(host), m_port(port), m_timeout(timeout) {
 
         m_client.set_timeout(timeout);
