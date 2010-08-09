@@ -25,6 +25,7 @@ int HubClient::del_queue(const std::string &name)
     }
 }
 
+/*
 int HubClient::start_queue(const std::string &name)
 {
     m_error_str.clear();
@@ -46,6 +47,8 @@ int HubClient::stop_queue(const std::string &name)
        return QCONTENTHUB_ERROR;
     }
 }
+
+*/
 
 int HubClient::force_del_queue(const std::string &name)
 {

@@ -2,10 +2,11 @@
 
 namespace qcontent {
 
-int HubQueue::add() {
-    return m_hub_client.add_queue(m_name, m_capacity);
+int HubQueue::add(int capacity) {
+    return m_hub_client.add_queue(m_name, capacity);
 }
 
+/*
 int HubQueue::start() {
     return m_hub_client.start_queue(m_name);
 }
@@ -13,6 +14,8 @@ int HubQueue::start() {
 int HubQueue::stop() {
     return m_hub_client.stop_queue(m_name);
 }
+*/
+
 int HubQueue::force_del() {
     return m_hub_client.force_del_queue(m_name);
 }

@@ -16,8 +16,10 @@ public:
 
     int add_queue(const std::string &name, int capacity = 1000);
     int del_queue(const std::string &name);
+    /*
     int start_queue(const std::string &name);
     int stop_queue(const std::string &name);
+    */
     int force_del_queue(const std::string &name);
     int push_queue(const std::string &name, const std::string &content);
     int push_queue_nowait(const std::string &name, const std::string &content);
